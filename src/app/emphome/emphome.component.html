@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-md-6">
+    <h2>Add Products</h2>
+    <form>
+      <div class="col-md-6">
+        <label for="id"> Id</label>
+        <input type="text" class="form-control" id="id" #id />
+      </div>
+      <div class="col-md-6">
+        <label for="username"> USERName</label>
+        <input type="text" class="form-control" id="name" #name />
+      </div>
+      <div class="col-md-6">
+        <label for="name">NAME</label>
+        <input type="text" class="form-control" id="price" #price />
+      </div>
+
+      <div class="col-md-6">
+        <label for="email">EMAIL</label>
+        <input type="text" class="form-control" id="price" #price />
+      </div>
+      <div class="col-md-6">
+        <label for="gender">GENDER</label>
+        <input type="text" class="form-control" id="price" #price />
+      </div>
+      <div class="col-md-6">
+        <label for="designation">designation</label>
+        <input type="text" class="form-control" id="price" #price />
+      </div>
+      <div class="col-md-6">
+        <label for="complete_address">complete_address</label>
+        <input type="text" class="form-control" id="price" #price />
+      </div>
+      <div class="col-md-6">
+        <label for="phone_number">phone_number</label>
+        <input
+          autocomplete="off"
+          type="number"
+          class="form-control"
+          id="price"
+          #price
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="addEmployee()">
+  Add
+</button>
+<button type="button" class="btn btn-primary" (click)="updateEmployee()">
+  save
+</button>
+
+<p>emphome works!</p>
+<button (click)="getEmpData()" class="btn btn-primary">Get</button>
+
+<!-- <div *ngFor="let emp of empData">
+  <h1>{{ emp.id }}</h1>
+  <h1>{{ emp.username }}</h1>
+  <h1>{{ emp.name }}</h1>
+  <h1>{{ emp.email }}</h1>
+  <h1>{{ emp.gender }}</h1>
+  <h1>{{ emp.phone_number }}</h1>
+  <h1>{{ emp.complete_address }}</h1>
+  <button (click)="updateEmployee()">Update</button>
+  <button (click)="deleteEmployee()">Delete</button>
+</div> -->
+
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">username</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Complete Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let emp of empData" class="table table-bordered">
+      <tr>
+        <td align="center">{{ emp.id }}</td>
+        <td align="center">{{ emp.username }}</td>
+        <td align="center">{{ emp.name }}</td>
+        <td align="center">{{ emp.email }}</td>
+        <td align="center">{{ emp.gender }}</td>
+        <td align="center">{{ emp.phone_number }}</td>
+        <td align="center">{{ emp.designation }}</td>
+        <td align="center">{{ emp.complete_address }}</td>
+        <button (click)="updateEmployee()">Edit</button>
+        <button (click)="deleteEmployee()">Delete</button>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- <h1>{{empData.id}}</h1> -->
